@@ -22,12 +22,12 @@ public class Response
 {
 	public enum ErrorLevel {DEBUG, INFO, WARN, ERROR, FATAL};
 	
-	public ErrorLevel errorLevel;
-	public boolean booleanCode;
-	public int intCode;
-	public String stringCode;
-	public String message;
-	public String detail;
+	private ErrorLevel errorLevel = null;
+	private boolean booleanCode = false;
+	private int intCode = 0;
+	private String stringCode = null;
+	private String message = null;
+	private String detail = null;
 	
 	public Response(ErrorLevel errorLevel, boolean booleanCode, int intCode, String stringCode, String message, String detail)
 	{
@@ -74,6 +74,17 @@ public class Response
 		this.stringCode = stringCode;
 		this.message = message;
 		this.detail = detail;
+	}
+	
+	public String getErrorLevelString()
+	{
+		if (this.getErrorLevel() == null) { return "UNKNOWN"; }
+		else if (this.getErrorLevel().compareTo(ErrorLevel.DEBUG) == 0) { return "DEBUG"; }
+		else if (this.getErrorLevel().compareTo(ErrorLevel.INFO) == 0) { return "INFO"; }
+		else if (this.getErrorLevel().compareTo(ErrorLevel.WARN) == 0) { return "WARN"; }
+		else if (this.getErrorLevel().compareTo(ErrorLevel.ERROR) == 0) { return "ERROR"; }
+		else if (this.getErrorLevel().compareTo(ErrorLevel.FATAL) == 0) { return "FATAL"; }
+		else { return "UNKNOWN"; }
 	}
 
 	public ErrorLevel getErrorLevel() {
