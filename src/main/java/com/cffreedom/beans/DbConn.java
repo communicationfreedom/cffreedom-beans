@@ -27,14 +27,13 @@ public class DbConn
 	String driver = null;
 	String url = null;
 	
-	public DbConn(String type, String host, String db, int port)
+	public DbConn(String driver, String url, String type, String host, String db, int port)
 	{
-		this(type, host, db, port, null, null);
-	}
-	
-	public DbConn(String type, String host, String db, String user, String pass)
-	{
-		this(type, host, db, 0, user, pass);
+		this(driver, url, null, null);
+		this.type = type;
+		this.host = host;
+		this.db = db;
+		this.port = port;
 	}
 	
 	public DbConn(String driver, String url, String user, String pass)
@@ -45,22 +44,14 @@ public class DbConn
 		this.pass = pass;
 	}
 	
-	public DbConn(String type, String host, String db, int port, String user, String pass)
-	{
-		this.type = type;
-		this.host = host;
-		this.db = db;
-		this.port = port;
-		this.user = user;
-		this.pass = pass;
-	}
-	
 	public String getType() { return this.type; }
 	public String getHost() { return this.host; }
 	public String getDb() { return this.db; }
 	public int getPort() { return this.port; }
 	public String getUser() { return this.user; }
 	public String getPassword() { return this.pass; } 
+	public String getDriver() { return this.driver; }
+	public String getUrl() { return this.url; }
 	
 	public void setUser(String s) { this.user = s; }
 	public void setPassword(String s) { this.pass = s; }
