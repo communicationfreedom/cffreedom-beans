@@ -15,6 +15,7 @@ package com.cffreedom.beans;
  * Changes
  * 2013-05-23 	markjacobsen.net 	Added setUser() and setPassword()
  * 2013-06-25 	markjacobsen.net 	Added option to create the bean with driver/url info
+ * 2013-07-15 	markjacobsen.net 	Added JNDI string
  */
 public class DbConn
 {
@@ -26,6 +27,12 @@ public class DbConn
 	String pass = null;
 	String driver = null;
 	String url = null;
+	String jndi = null;
+	
+	public DbConn(String jndi)
+	{
+		this.jndi = jndi;
+	}
 	
 	public DbConn(String driver, String url, String type, String host, String db, int port)
 	{
@@ -52,7 +59,9 @@ public class DbConn
 	public String getPassword() { return this.pass; } 
 	public String getDriver() { return this.driver; }
 	public String getUrl() { return this.url; }
+	public String getJndi() { return this.jndi; }
 	
 	public void setUser(String s) { this.user = s; }
 	public void setPassword(String s) { this.pass = s; }
+	public void setJndi(String s) { this.jndi = s; }
 }
