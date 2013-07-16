@@ -1,6 +1,7 @@
 package com.cffreedom.beans;
 
 /**
+ * Original Class: com.cffreedom.beans.User
  * @author markjacobsen.net (http://mjg2.net/code)
  * Copyright: Communication Freedom, LLC - http://www.communicationfreedom.com
  * 

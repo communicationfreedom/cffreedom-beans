@@ -3,6 +3,7 @@ package com.cffreedom.beans;
 import java.io.Serializable;
 
 /**
+ * Original Class: com.cffreedom.beans.PasswordEntry
  * @author markjacobsen.net (http://mjg2.net/code)
  * Copyright: Communication Freedom, LLC - http://www.communicationfreedom.com
  * 

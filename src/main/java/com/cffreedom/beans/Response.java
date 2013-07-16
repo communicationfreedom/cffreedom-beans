@@ -1,6 +1,7 @@
 package com.cffreedom.beans;
 
 /**
+ * Original Class: com.cffreedom.beans.Response
  * General purpose response object for holding multiple types of data 
  * about a response/return code (ex: int code, String message, etc)
  * 

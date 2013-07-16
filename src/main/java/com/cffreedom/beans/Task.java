@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
+ * Original Class: com.cffreedom.beans.Task
  * @author markjacobsen.net (http://mjg2.net/code)
  * Copyright: Communication Freedom, LLC - http://www.communicationfreedom.com
  * 
