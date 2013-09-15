@@ -15,15 +15,17 @@ package com.cffreedom.beans;
  */
 public class User
 {
-	private int id;
+	private int id = 0;
+	private String username;
 	private String firstName;
 	private String lastName;
 	private String email;
-		
-	public User(int id, String firstName, String lastName, String email)
+	
+	public User(int id, String username, String firstName, String lastName, String email)
 	{
 		super();
 		this.id = id;
+		this.username = username;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -31,21 +33,26 @@ public class User
 	
 	public int getId()
 	{
-		return id;
+		return this.id;
+	}
+	
+	public String getUsername()
+	{
+		return this.username;
 	}
 	
 	public String getFirstName()
 	{
-		return firstName;
+		return this.firstName;
 	}
 	
 	public String getLastName()
 	{
-		return lastName;
+		return this.lastName;
 	}
 
 	public String getEmail()
 	{
-		return email;
+		return this.email;
 	}
 }
