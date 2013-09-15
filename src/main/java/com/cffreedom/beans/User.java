@@ -20,7 +20,12 @@ public class User
 	private String name;
 	private String email;
 	
-	public User(int id, String username, String name, String email)
+	public User(int id, String username, String email)
+	{
+		this(id, username, email, "");
+	}
+	
+	public User(int id, String username, String email, String name)
 	{
 		super();
 		this.id = id;
