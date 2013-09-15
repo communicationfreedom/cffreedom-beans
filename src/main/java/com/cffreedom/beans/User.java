@@ -17,17 +17,15 @@ public class User
 {
 	private int id = 0;
 	private String username;
-	private String firstName;
-	private String lastName;
+	private String name;
 	private String email;
 	
-	public User(int id, String username, String firstName, String lastName, String email)
+	public User(int id, String username, String name, String email)
 	{
 		super();
 		this.id = id;
 		this.username = username;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.name = name;
 		this.email = email;
 	}
 	
@@ -41,14 +39,9 @@ public class User
 		return this.username;
 	}
 	
-	public String getFirstName()
+	public String getName()
 	{
-		return this.firstName;
-	}
-	
-	public String getLastName()
-	{
-		return this.lastName;
+		return this.name;
 	}
 
 	public String getEmail()
