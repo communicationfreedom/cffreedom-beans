@@ -18,6 +18,7 @@ package com.cffreedom.beans;
  * 2013-06-25 	markjacobsen.net 	Added option to create the bean with driver/url info
  * 2013-07-15 	markjacobsen.net 	Added JNDI string
  * 2013-09-10 	markjacobsen.net 	Additional constructor: DbConn(String db, String user, String pass)
+ * 2013-10-01 	MarkJacobsen.net 	Added alias and getters/setters
  */
 public class DbConn
 {
@@ -30,6 +31,7 @@ public class DbConn
 	String driver = null;
 	String url = null;
 	String jndi = null;
+	String alias = null;
 	
 	public DbConn(String jndi)
 	{
@@ -69,8 +71,16 @@ public class DbConn
 	public String getDriver() { return this.driver; }
 	public String getUrl() { return this.url; }
 	public String getJndi() { return this.jndi; }
+	public String getAlias() { return this.alias; }
 	
+	public void setType(String s) { this.type = s; }
+	public void setHost(String s) { this.host = s; }
+	public void setDb(String s) { this.db = s; }
+	public void setPort(int i) { this.port = i; }
+	public void setDriver(String s) { this.driver = s; }
+	public void setUrl(String s) { this.url = s; }
 	public void setUser(String s) { this.user = s; }
 	public void setPassword(String s) { this.pass = s; }
 	public void setJndi(String s) { this.jndi = s; }
+	public void setAlias(String s) { this.alias = s; }
 }
