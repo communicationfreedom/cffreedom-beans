@@ -17,6 +17,7 @@ import java.util.Date;
  * 
  * Changes:
  * 2013-05-07 	markjacobsen.net 	Additional constructor
+ * 2013-10-05	markjacobsen.net 	Added setters
  */
 public class EmailMessage
 {
@@ -64,6 +65,30 @@ public class EmailMessage
 		this.subject = subject;
 		this.body = body;
 	}
+	
+	/**
+	 * @param to
+	 * @param from
+	 * @param subject
+	 * @param body
+	 */
+	public EmailMessage(String to, String from, String subject, String body)
+	{
+		super();
+		this.to = to;
+		this.from = from;
+		this.subject = subject;
+		this.body = body;
+	}
+	
+	public void setFrom(String s) { this.from = s; }
+	public void setReplyTo(String s) { this.replyTo = s; }
+	public void setTo(String s) { this.to = s; }
+	public void setCc(String s) { this.cc = s; }
+	public void setBcc(String s) { this.bcc = s; }
+	public void setSubject(String s) { this.subject = s; }
+	public void setBody(String s) { this.body = s; }
+	public void setBodyHtml(String s) { this.bodyHtml = s; }
 	
 	public String getFrom() { return this.from; }
 	public String getReplyTo() { return this.replyTo; }
