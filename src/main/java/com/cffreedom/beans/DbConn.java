@@ -19,6 +19,7 @@ package com.cffreedom.beans;
  * 2013-07-15 	markjacobsen.net 	Added JNDI string
  * 2013-09-10 	markjacobsen.net 	Additional constructor: DbConn(String db, String user, String pass)
  * 2013-10-01 	MarkJacobsen.net 	Added alias and getters/setters
+ * 2013-10-07 	MarkJacobsen.net 	Added support for profileFile
  */
 public class DbConn
 {
@@ -32,6 +33,7 @@ public class DbConn
 	String url = null;
 	String jndi = null;
 	String alias = null;
+	String profileFile = null;
 	
 	public DbConn(String jndi)
 	{
@@ -72,6 +74,7 @@ public class DbConn
 	public String getUrl() { return this.url; }
 	public String getJndi() { return this.jndi; }
 	public String getAlias() { return this.alias; }
+	public String getProfileFile() { return this.profileFile; }
 	
 	public void setType(String s) { this.type = s; }
 	public void setHost(String s) { this.host = s; }
@@ -83,4 +86,5 @@ public class DbConn
 	public void setPassword(String s) { this.pass = s; }
 	public void setJndi(String s) { this.jndi = s; }
 	public void setAlias(String s) { this.alias = s; }
+	public void setProfileFile(String s) { this.profileFile = s; }
 }
