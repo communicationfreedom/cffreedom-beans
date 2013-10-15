@@ -19,16 +19,29 @@ public class Contact
 	private String firstName;
 	private String lastName;
 	private String email;
+	private String phoneNumber;
+	private String address;
+	private String city;
+	private String state;
+	private String postalCode;
 	
-	public String getFullName() { return fullName; }
+	public String getFullName() { return this.fullName; }
+	public String getFirstName() { return this.firstName; }
+	public String getLastName() { return this.lastName; }
+	public String getEmail() { return this.email; }
+	public String getPhoneNumber() { return this.phoneNumber; }
+	public String getAddress() { return this.address; }
+	public String getCity() { return this.city; }
+	public String getState() { return this.state; }
+	public String getPostalCode() { return this.postalCode; }
+	
 	public void setFullName(String fullName) { this.fullName = fullName; }
-	
-	public String getFirstName() { return firstName; }
 	public void setFirstName(String firstName) { this.firstName = firstName; }
-	
-	public String getLastName() { return lastName; }
 	public void setLastName(String lastName) { this.lastName = lastName; }
-	
-	public String getEmail() { return email; }
 	public void setEmail(String email) { this.email = email; }
+	public void setPhoneNumber(String s) { this.phoneNumber = s; }
+	public void setAddress(String s) { this.address = s; }
+	public void setCity(String s) { this.city = s; }
+	public void setState(String s) { this.state = s; }
+	public void setPostalCode(String s) { this.postalCode = s; }
 }
