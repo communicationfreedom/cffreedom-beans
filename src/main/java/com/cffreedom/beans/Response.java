@@ -96,7 +96,7 @@ public class Response
 		this.errorLevel = errorLevel;
 	}
 
-	public boolean isBooleanCode() {
+	public boolean getBooleanCode() {
 		return booleanCode;
 	}
 
