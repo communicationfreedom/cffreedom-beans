@@ -15,64 +15,26 @@ package com.cffreedom.beans;
  */
 public class PhoneNumber
 {
-	private int id = 0;
-	private int orderId = 0;
-	private String code = "";
-	private String number = "";
-	private boolean active = false;
-	private String name = "";
-	private String notes = "";
-	private int userId = 0;
-	private int companyId = 0;
-	private int phoneNumberTypeId = 0;
-	private boolean voiceEnabled = false;
-	private boolean smsEnabled = false;
-	private boolean cnameEnabled = false;
-	private int extensionId = 0;
-	private String defaultForward = "";
-	private String defaultNotifyEmailList = "";
-	private int defaultVoicemailRecordingId = 0;
-	private String dailyCallReportEmailList = "";
+	private String e164 = ""; // http://en.wikipedia.org/wiki/E.164
+	private String display = "";
+	private String isoCountry = ""; 
 	
-	public PhoneNumber(int id, int orderId, String code, String number, boolean active, String name, String notes, int userId, int companyId, int phoneNumberTypeId, boolean voiceEnabled, boolean smsEnabled, boolean cnameEnabled, int extensionId, String defaultForward, String defaultNotifyEmailList, int defaultVoicemailRecordingId, String dailyCallReportEmailList)
+	public PhoneNumber(){}
+	
+	public PhoneNumber(String e164, String display, String isoCountry)
 	{
-		super();
-		this.id = id;
-		this.orderId = orderId;
-		this.code = code;
-		this.number = number;
-		this.active = active;
-		this.name = name;
-		this.notes = notes;
-		this.userId = userId;
-		this.companyId = companyId;
-		this.phoneNumberTypeId = phoneNumberTypeId;
-		this.voiceEnabled = voiceEnabled;
-		this.smsEnabled = smsEnabled;
-		this.cnameEnabled = cnameEnabled;
-		this.extensionId = extensionId;
-		this.defaultForward = defaultForward;
-		this.defaultNotifyEmailList = defaultNotifyEmailList;
-		this.defaultVoicemailRecordingId = defaultVoicemailRecordingId;
-		this.dailyCallReportEmailList = dailyCallReportEmailList;
+		this.e164 = e164;
+		this.display = display;
+		this.isoCountry = isoCountry;
 	}
 	
-	public int getId() 							{ return id; }
-	public int getOrderId() 					{ return orderId; }
-	public String getCode() 					{ return code; }
-	public String getNumber() 					{ return number; }
-	public boolean isActive()					{ return active; }
-	public String getName() 					{ return name; }
-	public String getNotes() 					{ return notes; }
-	public int getUserId() 						{ return userId; }
-	public int getCompanyId() 					{ return companyId; }
-	public int getPhoneNumberTypeId() 			{ return phoneNumberTypeId; }
-	public boolean isVoiceEnabled() 			{ return voiceEnabled; }
-	public boolean isSmsEnabled() 				{ return smsEnabled; }
-	public boolean isCnameEnabled() 			{ return cnameEnabled; }
-	public int getExtensionId() 				{ return extensionId; }
-	public String getDefaultForward() 			{ return defaultForward; }
-	public String getDefaultNotifyEmailList() 	{ return defaultNotifyEmailList; }
-	public int getDefaultVoicemailRecordingId() { return defaultVoicemailRecordingId; }
-	public String getDailyCallReportEmailList() { return dailyCallReportEmailList; }
+	public void setE164(String s) { this.e164 = s; }
+	public void setCode(String s) { this.setE164(s); }
+	public void setDisplay(String s) { this.display = s; }
+	public void setIsoCountry(String s) { this.isoCountry = s; }
+	
+	public String getE164() { return this.e164; }
+	public String getCode() { return this.getE164(); }
+	public String getDisplay() { return this.display; }
+	public String getIsoCountry() { return this.isoCountry; }
 }
