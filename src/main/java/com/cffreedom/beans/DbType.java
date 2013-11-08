@@ -10,9 +10,9 @@ public enum DbType
 	ODBC("ODBC"),
 	SQLITE("SQLITE");
 	
-	public final String code;
+	public final String value;
 	
-	DbType(String code){
-		this.code = code;
+	DbType(String value){
+		this.value = value;
 	}
 }
