@@ -3,9 +3,7 @@ package com.cffreedom.beans;
 public enum DbType
 {
 	MYSQL("MYSQL"),
-	DB2("DB2_JCC"),
-	DB2_JCC("DB2_JCC"),
-	DB2_APP("DB2_APP"),
+	DB2("DB2"),
 	SQL_SERVER("SQL_SERVER"),
 	ODBC("ODBC"),
 	SQLITE("SQLITE");
