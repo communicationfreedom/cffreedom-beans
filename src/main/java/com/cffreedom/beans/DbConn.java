@@ -23,7 +23,7 @@ package com.cffreedom.beans;
  */
 public class DbConn
 {
-	String type = null;
+	DbType type = null;
 	String host = null;
 	String db = null;
 	int port = 0;
@@ -47,7 +47,7 @@ public class DbConn
 		this.pass = pass;
 	}
 	
-	public DbConn(String driver, String url, String type, String host, String db, int port)
+	public DbConn(String driver, String url, DbType type, String host, String db, int port)
 	{
 		this(driver, url, null, null);
 		this.type = type;
@@ -64,7 +64,7 @@ public class DbConn
 		this.pass = pass;
 	}
 	
-	public String getType() { return this.type; }
+	public DbType getType() { return this.type; }
 	public String getHost() { return this.host; }
 	public String getDb() { return this.db; }
 	public int getPort() { return this.port; }
@@ -76,7 +76,7 @@ public class DbConn
 	public String getAlias() { return this.alias; }
 	public String getProfileFile() { return this.profileFile; }
 	
-	public void setType(String s) { this.type = s; }
+	public void setType(DbType o) { this.type = o; }
 	public void setHost(String s) { this.host = s; }
 	public void setDb(String s) { this.db = s; }
 	public void setPort(int i) { this.port = i; }
