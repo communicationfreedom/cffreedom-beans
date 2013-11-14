@@ -24,6 +24,10 @@ public class Contact
 	private String city;
 	private String state;
 	private String postalCode;
+	private String shippingAddress;
+	private String shippingCity;
+	private String shippingState;
+	private String shippingPostalCode;
 	
 	public String getFullName() { return this.fullName; }
 	public String getFirstName() { return this.firstName; }
@@ -34,6 +38,10 @@ public class Contact
 	public String getCity() { return this.city; }
 	public String getState() { return this.state; }
 	public String getPostalCode() { return this.postalCode; }
+	public String getShippingAddress() { return this.shippingAddress; }
+	public String getShippingCity() { return this.shippingCity; }
+	public String getShippingState() { return this.shippingState; }
+	public String getShippingPostalCode() { return this.shippingPostalCode; }
 	
 	public void setFullName(String fullName) { this.fullName = fullName; }
 	public void setFirstName(String firstName) { this.firstName = firstName; }
@@ -44,4 +52,8 @@ public class Contact
 	public void setCity(String s) { this.city = s; }
 	public void setState(String s) { this.state = s; }
 	public void setPostalCode(String s) { this.postalCode = s; }
+	public void setShippingAddress(String s) { this.shippingAddress = s; }
+	public void setShippingCity(String s) { this.shippingCity = s; }
+	public void setShippingState(String s) { this.shippingState = s; }
+	public void setShippingPostalCode(String s) { this.shippingPostalCode = s; }
 }
