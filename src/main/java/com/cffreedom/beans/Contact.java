@@ -12,6 +12,9 @@ package com.cffreedom.beans;
  * 1) Donating: http://www.communicationfreedom.com/go/donate/
  * 2) Shoutout on twitter: @MarkJacobsen or @cffreedom
  * 3) Linking to: http://visit.markjacobsen.net
+ * 
+ * Changes:
+ * 2013-11-14	MarkJacobsen.net	Added toString()
  */
 public class Contact
 {
@@ -56,4 +59,26 @@ public class Contact
 	public void setShippingCity(String s) { this.shippingCity = s; }
 	public void setShippingState(String s) { this.shippingState = s; }
 	public void setShippingPostalCode(String s) { this.shippingPostalCode = s; }
+	
+	@Override
+	public String toString()
+	{
+		StringBuilder sb = new StringBuilder();
+		if (this.getFullName() != null) { sb.append(this.getFullName() + ", "); }
+		if (this.getFirstName() != null) { sb.append(this.getFirstName() + ", "); }
+		if (this.getLastName() != null) { sb.append(this.getLastName() + ", "); }
+		if (this.getEmail() != null) { sb.append(this.getEmail() + ", "); }
+		if (this.getPhoneNumber() != null) { sb.append(this.getPhoneNumber() + ", "); }
+		if (this.getAddress() != null) { sb.append(this.getAddress() + ", "); }
+		if (this.getCity() != null) { sb.append(this.getCity() + ", "); }
+		if (this.getState() != null) { sb.append(this.getState() + ", "); }
+		if (this.getPostalCode() != null) { sb.append(this.getPostalCode() + ", "); }
+		if (this.getShippingAddress() != null) { sb.append(this.getShippingAddress() + ", "); }
+		if (this.getShippingCity() != null) { sb.append(this.getShippingCity() + ", "); }
+		if (this.getShippingState() != null) { sb.append(this.getShippingState() + ", "); }
+		if (this.getShippingPostalCode() != null) { sb.append(this.getShippingPostalCode() + ", "); }
+		
+		if (sb.length() > 2) { return sb.substring(0, sb.length() - 2); }
+		else { return sb.toString(); }
+	}
 }
