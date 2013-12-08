@@ -6,7 +6,8 @@ public enum DbType
 	DB2("DB2"),
 	SQL_SERVER("SQL_SERVER"),
 	ODBC("ODBC"),
-	SQLITE("SQLITE");
+	SQLITE("SQLITE"),
+	HSQLDB("HSQLDB");
 	
 	public final String value;
 	

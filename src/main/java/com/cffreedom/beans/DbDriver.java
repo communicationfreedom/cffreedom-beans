@@ -9,7 +9,8 @@ public enum DbDriver
 	SQL_SERVER("com.microsoft.sqlserver.jdbc.SQLServerDriver"),
 	SQL_SERVER_2000("com.microsoft.jdbc.sqlserver.SQLServerDriver"),
 	ODBC("sun.jdbc.odbc.JdbcOdbcDriver"),
-	SQLITE("org.sqlite.JDBC");
+	SQLITE("org.sqlite.JDBC"),
+	HSQLDB("org.hsqldb.jdbc.JDBCDriver");
 	
 	public final String value;
 	
