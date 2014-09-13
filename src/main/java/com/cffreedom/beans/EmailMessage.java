@@ -32,6 +32,7 @@ public class EmailMessage
 	private Date msgDate;
 	private int msgId;
 	private String msgHeaders;
+	private String[][] attachments; 
 	
 	public EmailMessage(String from, String replyTo, String to, String cc, String subject, String body, String bodyHtml, Date msgDate, int msgId, String headers)
 	{
@@ -89,6 +90,7 @@ public class EmailMessage
 	public void setSubject(String s) { this.subject = s; }
 	public void setBody(String s) { this.body = s; }
 	public void setBodyHtml(String s) { this.bodyHtml = s; }
+	public void setAttachments(String[][] s) { this.attachments = s; }
 	
 	public String getFrom() { return this.from; }
 	public String getReplyTo() { return this.replyTo; }
@@ -98,6 +100,7 @@ public class EmailMessage
 	public String getSubject() { return this.subject; }
 	public String getBody() { return this.body; }
 	public String getBodyHtml() { return this.bodyHtml; }
+	public String[][] getAttachments() { return this.attachments; }
 	public Date getDate() { return this.msgDate; }
 	public int getId() { return this.msgId; }
 	public String getHeaders() { return this.msgHeaders; }
