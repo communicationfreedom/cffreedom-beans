@@ -18,10 +18,12 @@ import java.util.Date;
  * Changes:
  * 2013-05-07 	markjacobsen.net 	Additional constructor
  * 2013-10-05	markjacobsen.net 	Added setters
+ * 2015-02-10   markjacobsen.net    Added fromName
  */
 public class EmailMessage
 {
 	private String from;
+	private String fromName;
 	private String replyTo;
 	private String to;
 	private String cc;
@@ -83,6 +85,7 @@ public class EmailMessage
 	}
 	
 	public void setFrom(String s) { this.from = s; }
+	public void setFromName(String s) { this.fromName = s; }
 	public void setReplyTo(String s) { this.replyTo = s; }
 	public void setTo(String s) { this.to = s; }
 	public void setCc(String s) { this.cc = s; }
@@ -93,6 +96,7 @@ public class EmailMessage
 	public void setAttachments(String[][] s) { this.attachments = s; }
 	
 	public String getFrom() { return this.from; }
+	public String getFromName() { return this.fromName; }
 	public String getReplyTo() { return this.replyTo; }
 	public String getTo() { return this.to; }
 	public String getCc() { return this.cc; }
