@@ -7,7 +7,8 @@ public enum DbType
 	SQL_SERVER("SQL_SERVER"),
 	ODBC("ODBC"),
 	SQLITE("SQLITE"),
-	HSQLDB("HSQLDB");
+	HSQLDB("HSQLDB"),
+	MONGO("MONGO");
 	
 	public final String value;
 	
