@@ -2,6 +2,7 @@ package com.cffreedom.beans;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Original Class: com.cffreedom.beans.Task
@@ -34,7 +35,7 @@ public class Task
 	private String meta;
 	private Date startDate;
 	private Date dueDate;
-	private ArrayList<Container> tags;
+	private List<Container> tags;
 
 	public Task(String code, String title, String note)
 	{
@@ -137,12 +138,12 @@ public class Task
 		return this.dueDate;
 	}
 
-	public ArrayList<Container> getTags()
+	public List<Container> getTags()
 	{
 		return this.tags;
 	}
 
-	public void setTags(ArrayList<Container> o)
+	public void setTags(List<Container> o)
 	{
 		this.tags = o;
 	}
