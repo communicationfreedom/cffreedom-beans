@@ -57,7 +57,7 @@ public class Task
 		this(Task.SYS_UNKNOWN, new Container(folder, folder), null, code, title, note, null, dueDate, dueDate, null);
 	}
 	
-	public Task(String sourceSystem, Container folder, Project project, String code, String title, String note, String meta, Date startDate, Date dueDate, ArrayList<Container> tags)
+	public Task(String sourceSystem, Container folder, Project project, String code, String title, String note, String meta, Date startDate, Date dueDate, List<Container> tags)
 	{
 		this.sourceSystem = sourceSystem;
 		this.folder = folder;
