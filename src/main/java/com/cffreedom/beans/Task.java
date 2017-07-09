@@ -35,6 +35,7 @@ public class Task
 	private Calendar startDate;
 	private Calendar dueDate;
 	private List<Container> tags;
+	private Container context;
 
 	public Task(String code, String title, String note)
 	{
@@ -145,5 +146,13 @@ public class Task
 	public void setTags(List<Container> o)
 	{
 		this.tags = o;
+	}
+	
+	public Container getContext() {
+		return this.context;
+	}
+	
+	public void setContext(Container context) {
+		this.context = context;
 	}
 }
