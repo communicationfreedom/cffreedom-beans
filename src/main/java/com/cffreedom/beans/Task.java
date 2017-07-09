@@ -1,6 +1,7 @@
 package com.cffreedom.beans;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -33,8 +34,8 @@ public class Task
 	private String title;
 	private String note;
 	private String meta;
-	private Date startDate;
-	private Date dueDate;
+	private Calendar startDate;
+	private Calendar dueDate;
 	private List<Container> tags;
 
 	public Task(String code, String title, String note)
@@ -42,7 +43,7 @@ public class Task
 		this(Task.SYS_UNKNOWN, null, null, code, title, note, null, null, null, null);
 	}
 	
-	public Task(String code, String title, String note, Date dueDate)
+	public Task(String code, String title, String note, Calendar dueDate)
 	{
 		this(Task.SYS_UNKNOWN, null, null, code, title, note, null, dueDate, dueDate, null);
 	}
@@ -52,12 +53,12 @@ public class Task
 		this(Task.SYS_UNKNOWN, new Container(folder, folder), null, code, title, note, null, null, null, null);
 	}
 	
-	public Task(String folder, String code, String title, String note, Date dueDate)
+	public Task(String folder, String code, String title, String note, Calendar dueDate)
 	{
 		this(Task.SYS_UNKNOWN, new Container(folder, folder), null, code, title, note, null, dueDate, dueDate, null);
 	}
 	
-	public Task(String sourceSystem, Container folder, Project project, String code, String title, String note, String meta, Date startDate, Date dueDate, List<Container> tags)
+	public Task(String sourceSystem, Container folder, Project project, String code, String title, String note, String meta, Calendar startDate, Calendar dueDate, List<Container> tags)
 	{
 		this.sourceSystem = sourceSystem;
 		this.folder = folder;
@@ -128,12 +129,12 @@ public class Task
 		return this.meta;
 	}
 	
-	public Date getStartDate()
+	public Calendar getStartDate()
 	{
 		return this.startDate;
 	}
 	
-	public Date getDueDate()
+	public Calendar getDueDate()
 	{
 		return this.dueDate;
 	}
