@@ -1,4 +1,4 @@
 cffreedom-beans
 ===============
 
-Beans for cffreedom projects
+Beans for cffreedom projects.
