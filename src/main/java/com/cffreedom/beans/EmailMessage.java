@@ -33,8 +33,9 @@ public class EmailMessage
 	private String bodyHtml;
 	private Date msgDate;
 	private int msgId;
+	private String messageId;
 	private String msgHeaders;
-	private String[][] attachments; 
+	private String[][] attachments;
 	
 	public EmailMessage(String from, String replyTo, String to, String cc, String subject, String body, String bodyHtml, Date msgDate, int msgId, String headers)
 	{
@@ -94,6 +95,7 @@ public class EmailMessage
 	public void setBody(String s) { this.body = s; }
 	public void setBodyHtml(String s) { this.bodyHtml = s; }
 	public void setAttachments(String[][] s) { this.attachments = s; }
+	public void setMessageId(String s) { this.messageId = s; }
 	
 	public String getFrom() { return this.from; }
 	public String getFromName() { return this.fromName; }
@@ -107,5 +109,6 @@ public class EmailMessage
 	public String[][] getAttachments() { return this.attachments; }
 	public Date getDate() { return this.msgDate; }
 	public int getId() { return this.msgId; }
+	public String getMessageId() { return this.messageId; }
 	public String getHeaders() { return this.msgHeaders; }
 }
