@@ -19,6 +19,7 @@ import java.util.Date;
  * 2013-05-07 	markjacobsen.net 	Additional constructor
  * 2013-10-05	markjacobsen.net 	Added setters
  * 2015-02-10   markjacobsen.net    Added fromName
+ * 2020-11-21 	markjacobsen.net 	Added messageId and inReplyTo
  */
 public class EmailMessage
 {
@@ -34,6 +35,7 @@ public class EmailMessage
 	private Date msgDate;
 	private int msgId;
 	private String messageId;
+	private String inReplyTo;
 	private String msgHeaders;
 	private String[][] attachments;
 	
@@ -96,6 +98,7 @@ public class EmailMessage
 	public void setBodyHtml(String s) { this.bodyHtml = s; }
 	public void setAttachments(String[][] s) { this.attachments = s; }
 	public void setMessageId(String s) { this.messageId = s; }
+	public void setInReplyTo(String s) { this.inReplyTo = s; }
 	
 	public String getFrom() { return this.from; }
 	public String getFromName() { return this.fromName; }
@@ -110,5 +113,6 @@ public class EmailMessage
 	public Date getDate() { return this.msgDate; }
 	public int getId() { return this.msgId; }
 	public String getMessageId() { return this.messageId; }
+	public String getInReplyTo() { return this.inReplyTo; }
 	public String getHeaders() { return this.msgHeaders; }
 }
