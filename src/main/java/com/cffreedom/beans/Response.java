@@ -1,5 +1,8 @@
 package com.cffreedom.beans;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * Original Class: com.cffreedom.beans.Response
  * General purpose response object for holding multiple types of data 
@@ -29,6 +32,7 @@ public class Response
 	private String stringCode = null;
 	private String message = null;
 	private String detail = null;
+	private Map<String, List<String>> headers = null;
 	
 	public Response(ErrorLevel errorLevel, boolean booleanCode, int intCode, String stringCode, String message, String detail)
 	{
@@ -136,5 +140,12 @@ public class Response
 		this.detail = detail;
 	}
 	
+	public Map<String, List<String>> getHeaders() {
+		return headers;
+	}
+	
+	public void setHeaders(Map<String, List<String>> headers) {
+		this.headers = headers;
+	}
 	
 }
